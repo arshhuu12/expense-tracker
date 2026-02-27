@@ -143,6 +143,17 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+
+# macOS
+.DS_Store
 
 # Spyder project settings
 .spyderproject
