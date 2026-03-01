@@ -1,4 +1,5 @@
 import { useState } from "react"
+import logo from "../assets/logo.png"
 import { NavLink } from "react-router-dom"
 import { LogOut, Menu, X } from "lucide-react"
 
@@ -20,7 +21,16 @@ export default function Navbar() {
   return (
     <nav className="w-full border-b border-gray-700 bg-gray-900">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
-        <div className="text-xl font-bold text-white">💸 ExpenseIQ</div>
+        <div className="flex items-center gap-2">
+          <img 
+            src={logo} 
+            alt="ExpenseIQ" 
+            className="h-9 w-9 rounded-xl" 
+          />
+          <span className="text-xl font-bold text-white">
+            Expense<span className="text-indigo-400">IQ</span>
+          </span>
+        </div>
 
         {isAuthenticated ? (
           <div className="flex items-center gap-2">

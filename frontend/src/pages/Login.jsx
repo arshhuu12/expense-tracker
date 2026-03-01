@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react"
+import logo from "../assets/logo.png"
 import { useNavigate } from "react-router-dom"
 
 import { useAuth } from "../context/AuthContext"
@@ -82,10 +83,17 @@ export default function Login() {
       <div className="mx-auto w-full max-w-md">
         <div className="rounded-2xl bg-gray-800 p-8 shadow-2xl">
           <div className="mb-6 text-center">
-            <div className="text-3xl font-extrabold tracking-tight">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                💸 ExpenseIQ
-              </span>
+            <div className="flex flex-col items-center gap-3">
+              <img
+                src={logo}
+                alt="ExpenseIQ"
+                className="h-20 w-20 rounded-2xl shadow-lg"
+              />
+              <div className="text-3xl font-extrabold tracking-tight">
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  ExpenseIQ
+                </span>
+              </div>
             </div>
             <p className="mt-2 text-sm text-gray-300">
               Track smarter. Spend wiser.
