@@ -131,7 +131,8 @@ def update_expense(
     if payload.description is not None:
         expense.description = payload.description
     if payload.date is not None:
-        expense.date = payload.date
+        from datetime import date as date_type
+        expense.date = date_type.fromisoformat(payload.date)
 
     db.commit()
     db.refresh(expense)

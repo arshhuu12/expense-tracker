@@ -15,7 +15,7 @@ class ExpenseUpdate(BaseModel):
     amount: Optional[float] = Field(default=None, gt=0)
     description: Optional[str] = None
     category_id: Optional[int] = None
-    date: Optional[date] = None
+    date: Optional[str] = None
 
 
 class ExpenseResponse(BaseModel):
